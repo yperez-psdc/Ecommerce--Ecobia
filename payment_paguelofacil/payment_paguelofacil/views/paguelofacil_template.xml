@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+	<data>
+
+		<template id="paguelofacil_form">
+			<div>
+				<input type="hidden" name="data_set" t-att-data-action-url="tx_url" data-remove-me=""/>
+				<input type="hidden" name="cclw" t-att-value="cclw"/>
+				<input type="hidden" name="reference" t-att-value="reference"/>
+				<input type="hidden" name="amount" t-att-value="amount"/>
+				<input type="hidden" name="odoo_base_url" t-att-value="odoo_base_url"/>
+				<script type="text/javascript">
+					odoo.define(function (require) {
+						var ajax = require('web.ajax');
+						ajax.loadJS("/payment_paguelofacil/static/src/js/paguelofacil.js");
+					});
+				</script>
+			</div>
+		</template>
+
+	</data>
+</odoo>
